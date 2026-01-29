@@ -112,6 +112,14 @@
         <td>24.10%</td>
         <td>6.18%</td>
     </tr>
+    </tr><tr>
+        <td class="model-name">Kimi K2.5 Thinking</td>
+        <td>45.74%</td>
+        <td>66.06%</td>
+        <td>46.35%</td>
+        <td>26.35%</td>
+        <td>TBD</td>
+    </tr>
     <tr>
         <td class="model-name">Kimi K2 Thinking</td>
         <td>33.19%</td>
