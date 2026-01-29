@@ -118,7 +118,7 @@
         <td>66.06%</td>
         <td>46.35%</td>
         <td>26.35%</td>
-        <td>TBD</td>
+        <td>8.1%</td>
     </tr>
     <tr>
         <td class="model-name">Kimi K2 Thinking</td>
