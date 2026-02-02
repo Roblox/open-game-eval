@@ -32,7 +32,7 @@
         <td>24.88%</td>
         <td>5.99%</td>
     </tr>
-    <tr> ,,,
+    <tr>
         <td class="model-name">Gemini 3 Flash</td>
         <td><strong>54.68%</strong></td>
         <td><strong>65.73%</strong></td>
