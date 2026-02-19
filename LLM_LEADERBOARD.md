@@ -17,6 +17,14 @@
 </thead>
 <tbody>
     <tr>
+        <td class="model-name">Gemini 3.1 Pro</td>
+        <td><strong>55.32%</strong></td>
+        <td><strong>72.34%</strong></td>
+        <td>54.67%</td>
+        <td><strong>44.66%</strong></td>
+        <td>1.33%</td>
+    </tr>
+    <tr>
         <td class="model-name">Gemini 3 Pro</td>
         <td>48.94%</td>
         <td>59.41%</td>
@@ -34,10 +42,10 @@
     </tr>
     <tr>
         <td class="model-name">Gemini 3 Flash</td>
-        <td><strong>54.68%</strong></td>
+        <td>54.68%</td>
         <td>65.73%</td>
         <td><strong>56.99%</strong></td>
-        <td><strong>39.98%</strong></td>
+        <td>39.98%</td>
         <td>2.17%</td>
     </tr>
     <tr>
@@ -123,7 +131,7 @@
     <tr>
         <td class="model-name">GLM 5</td>
         <td>51.70%</td>
-        <td><strong>69.01%</strong></td>
+        <td>69.01%</td>
         <td>52.37%</td>
         <td>35.07%</td>
         <td>2.02%</td>
