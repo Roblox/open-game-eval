@@ -8,7 +8,7 @@
 
 Introduced a new eval category focused on **bug-fixing**. Each debug eval takes an existing scenario, injects a bug, and asks the model to resolve it. This tests a fundamentally different skill from code generation: the ability to read existing (broken) code, diagnose the root cause, and apply a targeted fix.
 
-30 debug evals were created from 15 base scenarios, with 1–3 bug variants per scenario. Bug types include incorrect property references, logic errors, missing cleanup, early returns, and broken state management.
+30 debug evals were created from 15 base scenarios, with 1–3 bug variants per scenario. Bugs were created through renaming and relocating instances in the data model, changing property values and constants, inverting logic (swapped operators, inverted conditions), and creating loopholes in player state management.
 
 ---
 
