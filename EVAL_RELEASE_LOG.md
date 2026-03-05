@@ -16,6 +16,6 @@ Introduced a new eval category focused on **bug-fixing**. Each debug eval takes 
 
 **Directory:** `Evals/`
 
-Initial release of OpenGameEval with 47 code-generation evals. These evals test an LLM's ability to write Luau scripts that modify or extend Roblox experiences. Tasks range from simple property changes to multi-step game feature implementations, evaluated via automated in-engine execution.
+Initial release of OpenGameEval with 47 code-generation evals. These evals test an LLM's ability to write Luau scripts that modify or extend Roblox experiences. Tasks range from simple property changes to multi-step game feature implementations, evaluated via automated execution of unit tests.
 
 The evals are heavily engineered towards code generation to implement game mechanics. They present a balance of adjusting scenes, revising existing logic, and building new functionalities.
