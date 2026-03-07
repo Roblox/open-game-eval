@@ -89,6 +89,14 @@
         <td>2.94%</td>
     </tr>
     <tr>
+        <td class="model-name">GPT-5.4 (Reasoning: M)</td>
+        <td>35.11%</td>
+        <td>55.43%</td>
+        <td>35.30%</td>
+        <td>16.74%</td>
+        <td>1.28%</td>
+    </tr>
+    <tr>
         <td class="model-name">GPT-5.2</td>
         <td>30.64%</td>
         <td>46.08%</td>
