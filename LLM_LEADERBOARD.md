@@ -109,6 +109,15 @@
         <td>50.00%</td>
     </tr>
     <tr>
+        <td class="model-name">GPT Codex 5.3</td>
+        <td>40.43%</td>
+        <td>61.70%</td>
+        <td>40.43%</td>
+        <td>23.12%</td>
+        <td>2.14%</td>
+        <td>47.33%</td>
+    </tr>
+    <tr>
         <td class="model-name">GPT-5.2</td>
         <td>30.64%</td>
         <td>46.08%</td>
