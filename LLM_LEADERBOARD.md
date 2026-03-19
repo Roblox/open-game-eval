@@ -232,7 +232,7 @@ Debug evals test an LLM's ability to identify and fix bugs in existing game scri
 <thead>
     <tr>
         <th rowspan="2">Model</th>
-        <th colspan="4" class="eval-pass">Pass Rate (30 debug evals, 5 runs each)</th>
+        <th colspan="4" class="eval-pass">Pass Rate </th>
         <th colspan="1" class="response-behavior">Tool Calling</th>
     </tr>
     <tr>
