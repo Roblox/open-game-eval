@@ -74,11 +74,11 @@
     </tr>
     <tr>
         <td class="model-name">Claude Sonnet 4.6</td>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
+        <td>46.38%</td>
+        <td>57.45%</td>
+        <td>46.46%</td>
+        <td>37.09%</td>
+        <td>1.27%</td>
         <td>46.00%</td>
     </tr>
     <tr>
