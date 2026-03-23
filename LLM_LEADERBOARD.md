@@ -70,7 +70,16 @@
         <td>52.25%</td>
         <td>39.29%</td>
         <td>1.4%</td>
+        <td>50.67%</td>
+    </tr>
+    <tr>
+        <td class="model-name">Claude Sonnet 4.6</td>
         <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>46.00%</td>
     </tr>
     <tr>
         <td class="model-name">Claude Opus 4.5</td>
@@ -250,7 +259,7 @@ Debug evals test an LLM's ability to identify and fix bugs in existing game scri
         <td><strong>73.33%</strong></td>
         <td><strong>59.87%</strong></td>
         <td>33.98%</td>
-        <td><strong>2.39%</strong></td>
+        <td>2.39%</td>
     </tr>
     <tr>
         <td class="model-name">Gemini 3.1 Pro</td>
@@ -269,12 +278,28 @@ Debug evals test an LLM's ability to identify and fix bugs in existing game scri
         <td>4.36%</td>
     </tr>
     <tr>
+        <td class="model-name">Claude Opus 4.6</td>
+        <td>50.67%</td>
+        <td>66.67%</td>
+        <td>49.52%</td>
+        <td>40.85%</td>
+        <td><strong>0.96%</strong></td>
+    </tr>
+    <tr>
         <td class="model-name">GPT Codex 5.3</td>
         <td>47.33%</td>
         <td>70.00%</td>
         <td>47.90%</td>
         <td>27.00%</td>
         <td>3.21%</td>
+    </tr>
+    <tr>
+        <td class="model-name">Claude Sonnet 4.6</td>
+        <td>46.00%</td>
+        <td>60.00%</td>
+        <td>46.47%</td>
+        <td>33.87%</td>
+        <td>6.47%</td>
     </tr>
 </tbody>
 </table>
