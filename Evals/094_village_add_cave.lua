@@ -71,13 +71,6 @@ local eval: BaseEval = {
 		}
 	},
 	place = "village.rbxl",
-	expected_tool_calls = { "game_tree", "execute_luau" },
-	expected_script_instances = {},
-	expected_non_script_instances = {
-		'game.Workspace.Terrain',
-		'game.Workspace.Map',
-		'game.ServerScriptService',
-	},
 	runConfig = {
 		serverCheck = nil,
 		clientChecks = {},

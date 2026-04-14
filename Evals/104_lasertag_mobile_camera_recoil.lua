@@ -20,13 +20,6 @@ local eval: BaseEval = {
 		},
 	},
 	place = "laser_tag.rbxl",
-	tool = nil,
-	tags = {},
-	expected_tool_calls = { "grep_search", "read_file", "multi_edit" },
-	expected_script_instances = {
-		"game.ReplicatedStorage.Blaster.Scripts.CameraRecoiler",
-	},
-	expected_non_script_instances = {},
 	runConfig = {
 		serverCheck = nil,
 		clientChecks = {},

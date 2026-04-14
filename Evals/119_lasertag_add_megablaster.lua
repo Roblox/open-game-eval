@@ -24,9 +24,6 @@ local eval: BaseEval = {
 		}
 	},
 	place = "laser_tag.rbxl",
-	expected_tool_calls = { "game_tree", "execute_luau" },
-	expected_script_instances = {},
-	expected_non_script_instances = {},
 	runConfig = {
 		serverCheck = nil,
 		clientChecks = {},

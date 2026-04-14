@@ -24,9 +24,6 @@ local eval: BaseEval = {
                 }
             },
     place = "platformer.rbxl",
-    expected_tool_calls = { "grep_search", "read_file", "multi_edit" },
-    expected_script_instances = { "game.ReplicatedStorage.CoinController" },
-    expected_non_script_instances = { },
     runConfig = {
         serverCheck = nil,
         clientChecks = {},

@@ -156,32 +156,6 @@ local eval: BaseEval = {
 		}
 	},
 	place = "laser_tag.rbxl",
-	expected_tool_calls = { "grep_search", "read_file", "multi_edit" },
-	expected_script_instances = {
-		'game.StarterPack.AutoBlaster.Scripts.Blaster',
-		'game.StarterPack.Blaster.Scripts.Blaster',
-		'game.ReplicatedStorage.Blaster.Scripts.BlasterController',
-		'game.ReplicatedStorage.Blaster.Utility.canPlayerDamageHumanoid',
-		'game.ReplicatedStorage.Blaster.Utility.castRays',
-		'game.ServerScriptService.Blaster.Scripts.Blaster',
-		'game.ServerScriptService.Blaster.Scripts.Blaster.validateShot',
-		'game.ServerScriptService.Blaster.Scripts.Blaster.validateShootArguments',
-		'game.ServerScriptService.Blaster.Scripts.Blaster.validateTag',
-		'game.ServerScriptService.Gameplay.Scripts.TeamCollisionFiltering'
-	},
-	expected_non_script_instances = {
-		'game.Teams.Green',
-		'game.Teams.Pink',
-		'game.StarterPack.AutoBlaster',
-		'game.StarterPack.Blaster',
-		'game.ReplicatedStorage.Blaster',
-		'game.ReplicatedStorage.Blaster.Scripts',
-		'game.ReplicatedStorage.Blaster.Utility',
-		'game.ServerScriptService.Blaster',
-		'game.ServerScriptService.Blaster.Scripts',
-		'game.ServerScriptService.Gameplay',
-		'game.ServerScriptService.Gameplay.Scripts'
-	},
 	runConfig = {
 		serverCheck = nil,
 		clientChecks = {},

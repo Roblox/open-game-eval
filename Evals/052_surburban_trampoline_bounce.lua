@@ -21,11 +21,6 @@ local eval: BaseEval = {
                 }
             },
     place = "surburban.rbxl",
-    tool = nil,
-    tags = {"game_iteration"},
-    difficulty = "easy",
-	expected_tool_calls = { "execute_luau", "multi_edit" },
-}
 
 local SelectionContextJson = "[]"
 local TableSelectionContext = HttpService:JSONDecode(SelectionContextJson)

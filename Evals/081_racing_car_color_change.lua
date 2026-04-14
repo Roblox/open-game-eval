@@ -72,15 +72,6 @@ local eval: BaseEval = {
 		}
 	},
 	place = "racing.rbxl",
-	expected_tool_calls = { "game_tree", "multi_edit" },
-	expected_script_instances = {},
-	expected_non_script_instances = {
-		'game.ReplicatedStorage.Car',
-		'game.ReplicatedStorage.Car.Body.Collision.body',
-		'game.ReplicatedStorage.Car.Body.Collision.body["Color"]',
-		'game.ReplicatedStorage.Car.DriverSeat',
-		'game.ReplicatedStorage.Car.DriverSeat["Occupant"]',
-	},
 	runConfig = {
 		serverCheck = nil,
 		clientChecks = {},

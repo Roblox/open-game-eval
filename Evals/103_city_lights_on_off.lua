@@ -20,15 +20,6 @@ local eval: BaseEval = {
 		},
 	},
 	place = "modern_city.rbxl",
-	tool = nil,
-	tags = {},
-	expected_tool_calls = {
-		"game_tree	", -- check existence of lights
-		"inspect_instance", -- check enabled attribute of lights
-		"multi_edit",
-	},
-	expected_script_instances = {},
-	expected_non_script_instances = {},
 }
 
 local SelectionContextJson = "[]"

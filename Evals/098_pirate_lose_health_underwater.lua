@@ -20,14 +20,6 @@ local eval: BaseEval = {
 		},
 	},
 	place = "pirate_island.rbxl",
-	tool = nil,
-	tags = {},
-	expected_tool_calls = {
-		"game_tree", -- check if existing scripts on health exist
-		"multi_edit",
-	},
-	expected_script_instances = {},
-	expected_non_script_instances = {},
 }
 
 local SelectionContextJson = "[]"

@@ -76,9 +76,6 @@ Make the cheese burger restore half of the hunger bar and the water bottle resto
 		}
 	},
 	place = "baseplate.rbxl",
-	expected_tool_calls = { "execute_luau", "multi_edit" },
-	expected_script_instances = {},
-	expected_non_script_instances = {},
 	runConfig = {
 		serverCheck = nil,
 		clientChecks = {},

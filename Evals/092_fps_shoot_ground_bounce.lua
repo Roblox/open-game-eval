@@ -72,9 +72,6 @@ local eval: BaseEval = {
                 }
             },
     place = "fps_system.rbxl",
-    expected_tool_calls = { "grep_search", "read_file", "multi_edit" },
-    expected_script_instances = { 'game.ReplicatedStorage.Blaster.Scripts.BlasterController' },
-    expected_non_script_instances = { 'game.StarterPack.Blaster' },
     runConfig = {
         serverCheck = nil,
         clientChecks = {},

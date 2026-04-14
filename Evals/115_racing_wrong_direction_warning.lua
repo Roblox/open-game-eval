@@ -64,15 +64,6 @@ local eval: BaseEval = {
 		request_id = "pilot_029"
 	}}},
 	place = "racing.rbxl",
-	expected_tool_calls = { "game_tree", "grep_search", "read_file", "multi_edit" },
-	expected_script_instances = {
-		"game.ReplicatedStorage.Utility.getCheckpoints"
-	},
-	expected_non_script_instances = {
-		"game.StarterGui.RaceGui",
-		"game.Workspace.Race.Checkpoints",
-		"game.ReplicatedStorage.Remotes"
-	},
 	runConfig = {
 		serverCheck = nil,
 		clientChecks = {},

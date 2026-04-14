@@ -20,17 +20,6 @@ local eval: BaseEval = {
 		},
 	},
 	place = "modern_city.rbxl",
-	tool = nil,
-	tags = {},
-	difficulty = "easy",
-	expected_tool_calls = {
-		"game_tree", -- identify road (not necessarily cars)
-		"execute_luau",
-	},
-	expected_script_instances = {},
-	expected_non_script_instances = {
-		"game.Workspace.City_Template.Streets_Sidewalks",
-	},
 }
 
 local SelectionContextJson = "[]"

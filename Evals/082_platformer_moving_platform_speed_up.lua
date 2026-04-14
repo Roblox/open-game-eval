@@ -20,22 +20,6 @@ local eval: BaseEval = {
 		},
 	},
 	place = "platformer.rbxl",
-	tool = nil,
-	tags = {},
-	expected_tool_calls = {
-		"grep_search", -- check how platform speed is scripted
-		"read_file",
-		"game_tree", -- find platform parts
-		"inspect_instance", -- get speed attribute
-		"execute_luau",
-	},
-	expected_script_instances = {
-		"game.ReplicatedStorage.Gameplay.Constants",
-		"game.ServerScriptService.Gameplay.Scripts.MovingPlatformController",
-	},
-	expected_non_script_instances = {
-		"game.Workspace.Gameplay.MovingPlatforms.MovingPlatform.speed",
-	},
 }
 
 local SelectionContextJson = "[]"

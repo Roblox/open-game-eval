@@ -25,9 +25,6 @@ local eval: BaseEval = {
 		},
 	},
 	place = "baseplate.rbxl",
-	expected_tool_calls = { "execute_luau", "multi_edit" },
-	expected_script_instances = {},
-	expected_non_script_instances = {},
 	runConfig = {
 		serverCheck = nil,
 		clientChecks = {},

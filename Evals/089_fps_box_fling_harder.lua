@@ -20,18 +20,6 @@ local eval: BaseEval = {
 		},
 	},
 	place = "fps_system.rbxl",
-	tool = nil,
-	tags = {},
-	expected_tool_calls = {
-		"game_tree",
-		"inspect_instance", -- find weapons and get force attributes
-		"execute_luau",
-	},
-	expected_script_instances = {},
-	expected_non_script_instances = {
-		"game.StarterPack.AutoBlaster.unanchoredImpulseForce",
-		"game.StarterPack.Blaster.unanchoredImpulseForce",
-	},
 }
 
 local SelectionContextJson = "[]"

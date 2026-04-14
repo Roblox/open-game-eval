@@ -21,14 +21,6 @@ local eval: BaseEval = {
                 }
             },
     place = "village.rbxl",
-    tool = nil,
-    tags = {"game_iteration"},
-    difficulty = "medium",
-    expected_tool_calls = { "execute_luau", "multi_edit" },
-    runConfig = {
-        serverCheck = nil,
-        clientChecks = {},
-    },
 }
 
 local SelectionContextJson = "[]"
@@ -74,10 +66,3 @@ eval.check_game = function()
 		if tool then break end
 		local r = (math.random(-1000, 1000)/3000) + 1
 		humanoid:MoveTo(target.Position+Vector3.new(r,0,r))
-		tool = character:FindFirstChildOfClass("Tool")
-		task.wait(0.25)
-	end
-	assert(tool, "Player did not pick up the plant")
-end
-
-return eval

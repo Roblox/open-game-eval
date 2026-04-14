@@ -20,16 +20,6 @@ local eval: BaseEval = {
 		},
 	},
 	place = "racing.rbxl",
-	tool = nil,
-	tags = {},
-	expected_tool_calls = {
-		"grep_search",
-		"read_file", -- check how laps are scripted
-		"inspect_instance", -- get attributes for laps
-		"execute_luau",
-	},
-	expected_script_instances = {},
-	expected_non_script_instances = { "game.Workspace.Race.numberOfLaps" },
 	runConfig = {
 		serverCheck = nil,
 		clientChecks = {},

@@ -21,14 +21,6 @@ local eval: BaseEval = {
                 }
             },
     place = "laser_tag.rbxl",
-    tool = nil,
-    tags = {"game_iteration"},
-    difficulty = "medium",
-	expected_tool_calls = { "grep_search", "multi_edit" },
-    runConfig = {
-        serverCheck = nil,
-        clientChecks = {},
-    },
 }
 
 local SelectionContextJson = "[]"

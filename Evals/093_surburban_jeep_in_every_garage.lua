@@ -20,20 +20,6 @@ local eval: BaseEval = {
 		},
 	},
 	place = "surburban.rbxl",
-	tool = nil,
-	tags = {},
-	difficulty = "easy",
-	expected_tool_calls = {
-		"game_tree", -- locate jeep and garages
-		"inspect_instance", -- locate garage frames to place jeep in
-		"execute_luau",
-	},
-	expected_script_instances = {},
-	expected_non_script_instances = {
-		"game.Workspace.Jeep",
-		"game.Workspace.GarageBuilding",
-		'game.Workspace["Urban House"].Body.GarageFrame',
-	},
 }
 
 local SelectionContextJson = "[]"

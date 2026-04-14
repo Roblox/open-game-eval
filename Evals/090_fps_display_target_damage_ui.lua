@@ -72,14 +72,6 @@ local eval: BaseEval = {
                 }
             },
     place = "fps_system.rbxl",
-    expected_tool_calls = { "game_tree", "execute_luau", "multi_edit" },
-    expected_script_instances = {
-        'game.ServerScriptService.Targets',
-        'game.ServerScriptService.Blaster.Scripts.Blaster'
-    },
-    expected_non_script_instances = {
-        'game.ServerScriptService.Blaster.Events.Tagged'
-    },
     runConfig = {
         serverCheck = nil,
         clientChecks = {},

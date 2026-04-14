@@ -20,18 +20,6 @@ local eval: BaseEval = {
 		},
 	},
 	place = "modern_city.rbxl",
-	tool = nil,
-	tags = {},
-	expected_tool_calls = {
-		"game_tree", -- search for building
-		"inspect_instance", -- check building heights
-		"execute_luau",
-	},
-	expected_script_instances = {},
-	expected_non_script_instances = {
-		"game.Workspace.City_Template.SpawnLocation",
-		"game.Workspace.City_Template.CityTemplateBuildings.I",
-	},
 }
 
 local SelectionContextJson = "[]"

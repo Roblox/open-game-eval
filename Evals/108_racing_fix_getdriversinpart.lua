@@ -24,9 +24,6 @@ local eval: BaseEval = {
 		}
 	},
 	place = "racing.rbxl",
-	expected_tool_calls = { "grep_search", "read_file", "multi_edit" },
-	expected_script_instances = { "game.ServerScriptService.Racing.RaceManager" },
-	expected_non_script_instances = {},
 	runConfig = {
 		serverCheck = nil,
 		clientChecks = {},
