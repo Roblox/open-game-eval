@@ -2,6 +2,16 @@
 
 ---
 
+## Apr 14, 2026 — Code Generation Batch 2 (40 evals)
+
+**Directory:** `Evals/`
+
+Released 40 new coding capability evals that raise the complexity and broaden place coverage. 4 additional places are added, alongside with "from-scratch" baseplate scenarios that test larger system creation with multiple steps expected.
+
+Together with this release, we removed unfinalized metadata fields (`difficulty`, `tags`, `expected_tool_calls`, `expected_script_instances`, `expected_non_script_instances`) from all evals to avoid confusion as our understanding of eval taxonomy and model capabilities evolves.
+
+---
+
 ## March 3, 2026 — Debug Evals (30 evals)
 
 **Directory:** `DebugEvals/`
