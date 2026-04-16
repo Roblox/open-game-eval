@@ -278,6 +278,14 @@ Debug evals test an LLM's ability to identify and fix bugs in existing game scri
         <td>4.36%</td>
     </tr>
     <tr>
+        <td class="model-name">Claude Opus 4.7</td>
+        <td>52.67%</td>
+        <td>63.33%</td>
+        <td>53.14%</td>
+        <td>43.57%</td>
+        <td>4.26%</td>
+    </tr>
+    <tr>
         <td class="model-name">Claude Opus 4.6</td>
         <td>50.67%</td>
         <td>66.67%</td>
