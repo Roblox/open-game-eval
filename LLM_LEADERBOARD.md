@@ -62,6 +62,15 @@
         <td>14.15%</td>
         <td>4.00%</td>
         <td>-</td>
+    </tr>,,,
+    <tr>
+        <td class="model-name">Claude Opus 4.7</td>
+        <td>46.38%</td>
+        <td>61.34%</td>
+        <td>45.44%</td>
+        <td>34.87%</td>
+        <td>2.24%</td>
+        <td>52.67%</td>
     </tr>
     <tr>
         <td class="model-name">Claude Opus 4.6</td>
