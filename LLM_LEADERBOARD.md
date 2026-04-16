@@ -62,7 +62,7 @@
         <td>14.15%</td>
         <td>4.00%</td>
         <td>-</td>
-    </tr>,,,
+    </tr>
     <tr>
         <td class="model-name">Claude Opus 4.7</td>
         <td>46.38%</td>
