@@ -21,14 +21,6 @@ local eval: BaseEval = {
                 }
             },
     place = "baseplate.rbxl",
-    tool = nil,
-    tags = {"game_iteration"},
-    difficulty = "easy",
-	expected_tool_calls = { "multi_edit" },
-    runConfig = {
-        serverCheck = nil,
-        clientChecks = {},
-    },
 }
 
 local SelectionContextJson = "[]"

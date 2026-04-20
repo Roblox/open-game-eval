@@ -21,11 +21,6 @@ local eval: BaseEval = {
 	},
 	-- optional, placefile to load before running setup function
 	place = "baseplate.rbxl",
-	tool = nil,
-	tags = {"game_iteration"},
-	difficulty = "medium",
-	expected_tool_calls = { "grep_search", "multi_edit" },
-}
 
 local SelectionContextJson = "[]"
 local TableSelectionContext = HttpService:JSONDecode(SelectionContextJson)

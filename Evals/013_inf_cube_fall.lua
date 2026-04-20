@@ -20,11 +20,6 @@ local eval: BaseEval = {
                 }
             },
     place = "baseplate.rbxl",
-    tool = nil,
-	tags = {"game_iteration"},
-	difficulty = "easy",
-	expected_tool_calls = { "multi_edit" },
-}
 
 local SelectionContextJson = "[]"
 local TableSelectionContext = HttpService:JSONDecode(SelectionContextJson)

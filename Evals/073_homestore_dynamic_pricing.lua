@@ -21,11 +21,6 @@ local eval: BaseEval = {
                 }
             },
     place = "ugc_homestore.rbxl",
-    tool = nil,
-	tags = {"code_runner"},
-	difficulty = "easy",
-	expected_tool_calls = { "grep_search", "read_file", "multi_edit" },
-}
 
 local selection_context_json = "[]"
 local table_selection_context = HttpService:JSONDecode(selection_context_json)

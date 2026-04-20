@@ -21,14 +21,6 @@ local eval: BaseEval = {
                 }
             },
     place = "surburban.rbxl",
-    tool = nil,
-    tags = {"game_iteration"},
-    difficulty = "hard",
-	expected_tool_calls = { "grep_search", "read_file", "multi_edit" },
-    runConfig = {
-        serverCheck = nil,
-        clientChecks = {},
-    },
 }
 
 local SelectionContextJson = "[]"

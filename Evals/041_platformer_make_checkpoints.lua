@@ -21,14 +21,6 @@ local eval: BaseEval = {
                 }
             },
     place = "platformer.rbxl",
-    tool = nil,
-    tags = {"game_iteration"},
-    difficulty = "easy",
-    expected_tool_calls = { "grep_search", "read_file", "multi_edit" },
-    runConfig = {
-        serverCheck = nil,
-        clientChecks = {},
-    },
 }
 
 local SelectionContextJson = "[{\"instanceName\": \"OneJump\", \"className\": \"Model\"}]"

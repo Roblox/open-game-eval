@@ -20,11 +20,6 @@ local eval: BaseEval = {
                 }
             },
     place = "village.rbxl",
-    tool = nil,
-	tags = {"code_runner"},
-	difficulty = "medium",
-	expected_tool_calls = { "execute_luau" },
-}
 
 local SelectionContextJson = "[]"
 local TableSelectionContext = HttpService:JSONDecode(SelectionContextJson)

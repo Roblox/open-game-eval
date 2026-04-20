@@ -21,14 +21,6 @@ local eval: BaseEval = {
                 }
             },
     place = "surburban.rbxl",
-    tool = nil,
-    tags = {"code_runner"},
-    difficulty = "medium",
-    expected_tool_calls = { "execute_luau" },
-    runConfig = {
-        serverCheck = nil,
-        clientChecks = {},
-    },
 }
 
 local SelectionContextJson = "[]"

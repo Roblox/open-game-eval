@@ -21,14 +21,6 @@ local eval: BaseEval = {
                 }
             },
     place = "village.rbxl",
-    tool = nil,
-    tags = {"code_runner"},
-    difficulty = "easy",
-	expected_tool_calls = { "execute_luau" },
-    runConfig = {
-        serverCheck = nil,
-        clientChecks = {},
-    },
 }
 
 local SelectionContextJson = "[]"
