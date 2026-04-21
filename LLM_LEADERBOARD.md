@@ -242,6 +242,46 @@
 <br>
 💡 We see that agentic tasks in practice generate deep, multi-step execution paths, and enhancing the model's performance and subsequent evaluation metrics for these trajectories will be a key area of focus.
 
+## Expanded Eval Set (87 Evals)
+
+The expanded eval set adds 40 new evals covering more complex game mechanics (scripting, physics, multi-instance edits, client-server interactions) to the original 47.
+<table>
+<thead>
+    <tr>
+        <th rowspan="2">Model</th>
+        <th colspan="4" class="eval-pass">Pass Rate</th>
+        <th colspan="1" class="response-behavior">Tool Calling</th>
+    </tr>
+    <tr>
+        <th class="eval-pass"><strong>Pass@1</strong></th>
+        <th class="eval-pass"><strong>Pass@5</strong></th>
+        <th class="eval-pass"><strong>Cons@5</strong></th>
+        <th class="eval-pass"><strong>All@5</strong></th>
+        <th class="response-behavior"><strong>Avg Tool Error Rate</strong></th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td class="model-name">Claude Opus 4.6</td>
+        <td><strong>48.05%</strong></td>
+        <td><strong>59.77%</strong></td>
+        <td><strong>48.05%</strong></td>
+        <td><strong>38.28%</strong></td>
+        <td><strong>0.71%</strong></td>
+    </tr>
+    <tr>
+        <td class="model-name">Claude Opus 4.7</td>
+        <td>43.45%</td>
+        <td>58.62%</td>
+        <td>43.45%</td>
+        <td>32.18%</td>
+        <td>1.33%</td>
+    </tr>
+</tbody>
+</table>
+
+> **Comments**: The Pass@1 gap (-4.6pp) between Opus 4.6 and 4.7 is **not statistically significant** (p=0.24, paired t-test). However, tool usage patterns diverge sharply — Opus 4.7 uses 39% fewer tool calls overall (p<0.001), with the largest drops in exploration tools (`search_game_tree`, `script_grep`, `inspect_instance`). See [Detailed Reviews/Opus 4.7 vs 4.6](Detailed%20Reviews/Opus%204.7%20vs%204.6) for a full comparison.
+
 ## Debug Eval Leaderboard
 
 Debug evals test an LLM's ability to identify and fix bugs in existing game scripts. Each eval presents a buggy script and the model must correct the issue.
