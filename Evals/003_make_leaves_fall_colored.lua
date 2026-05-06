@@ -19,7 +19,9 @@ local eval: BaseEval = {
                     }
                 }
             },
-    place = "village.rbxl",
+    place = "village.rbxl"
+
+}
 
 local SelectionContextJson = "[]"
 local TableSelectionContext = HttpService:JSONDecode(SelectionContextJson)

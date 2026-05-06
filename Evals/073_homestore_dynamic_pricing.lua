@@ -20,7 +20,9 @@ local eval: BaseEval = {
                     }
                 }
             },
-    place = "ugc_homestore.rbxl",
+    place = "ugc_homestore.rbxl"
+
+}
 
 local selection_context_json = "[]"
 local table_selection_context = HttpService:JSONDecode(selection_context_json)

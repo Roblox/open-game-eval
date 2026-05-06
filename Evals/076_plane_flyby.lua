@@ -19,7 +19,9 @@ local eval: BaseEval = {
                     }
                 }
             },
-    place = "baseplate.rbxl",
+    place = "baseplate.rbxl"
+
+}
 
 local selection_context_json = "[]"
 local table_selection_context = HttpService:JSONDecode(selection_context_json)

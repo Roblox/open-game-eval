@@ -48,6 +48,8 @@ end
 eval.check_scene = function()
 end
 
+eval.runConfig = { clientChecks = {} }
+
 eval.runConfig.serverCheck = function()
 end
 
