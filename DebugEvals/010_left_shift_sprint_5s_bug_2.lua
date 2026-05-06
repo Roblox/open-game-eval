@@ -126,6 +126,8 @@ end
 
 eval.check_scene = function() end
 
+eval.runConfig = { clientChecks = {} }
+
 eval.runConfig.serverCheck = function() end
 
 assert(eval.runConfig and eval.runConfig.clientChecks, "runConfig.clientChecks is required")

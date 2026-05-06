@@ -46,6 +46,8 @@ end
 eval.check_scene = function()
 end
 
+eval.runConfig = { clientChecks = {} }
+
 assert(eval.runConfig, "runConfig is required")
 eval.runConfig.serverCheck = function()
 	local shootRemote = game:GetService("ReplicatedStorage").Blaster.Remotes.Shoot;

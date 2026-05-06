@@ -20,7 +20,9 @@ local eval: BaseEval = {
 		}
 	},
 	-- optional, placefile to load before running setup function
-	place = "baseplate.rbxl",
+	place = "baseplate.rbxl"
+
+}
 
 local SelectionContextJson = "[]"
 local TableSelectionContext = HttpService:JSONDecode(SelectionContextJson)

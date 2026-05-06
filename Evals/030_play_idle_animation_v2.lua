@@ -48,6 +48,8 @@ end
 eval.check_scene = function()
 end
 
+eval.runConfig = { clientChecks = {} }
+
 assert(eval.runConfig and eval.runConfig.clientChecks, "runConfig.clientChecks is required")
 table.insert(eval.runConfig.clientChecks, function(logService)
 	task.wait(5)
