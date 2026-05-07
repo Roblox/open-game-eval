@@ -277,6 +277,14 @@ The expanded eval set adds 40 new evals covering more complex game mechanics (sc
         <td>32.18%</td>
         <td>1.33%</td>
     </tr>
+    <tr>
+        <td class="model-name">GPT-5.5 (Reasoning: M)</td>
+        <td>43.45%</td>
+        <td>60.92%</td>
+        <td>43.03%</td>
+        <td>31.67%</td>
+        <td>0.78%</td>
+    </tr>
 </tbody>
 </table>
 
@@ -333,6 +341,14 @@ Debug evals test an LLM's ability to identify and fix bugs in existing game scri
         <td>49.52%</td>
         <td>40.85%</td>
         <td><strong>0.96%</strong></td>
+    </tr>
+    <tr>
+        <td class="model-name">GPT-5.5 (Reasoning: M)</td>
+        <td>50.00%</td>
+        <td>66.67%</td>
+        <td>51.02%</td>
+        <td>35.18%</td>
+        <td>1.54%</td>
     </tr>
     <tr>
         <td class="model-name">GPT Codex 5.3</td>
