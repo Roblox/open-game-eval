@@ -2,7 +2,7 @@
 
 The benchmark below is based on the **87-eval expanded set**. New model entries land here.
 
-> The previous 47-eval leaderboard has been deprecated and moved to the 'Deprecated' directory. It is retained for historical reference only; do not add new models there.
+> The previous 47-eval leaderboard has been deprecated and moved to the 'Deprecated' directory. It is retained for historical reference only.
 
 ## Expanded Eval Set (87 Evals)
 
@@ -170,7 +170,6 @@ Debug evals test an LLM's ability to identify and fix bugs in existing game scri
 </tbody>
 </table>
 
-> **Gemini 3.5 Flash and Gemini 3 Flash Preview** were both run on May 20, 2026 with the same "default" settings used for the 87-eval expanded set above (no explicit `thinkingConfig` — Vertex per-model auto-thinking; `temperature=1.0`, `topP=0.95`, `maxOutputTokens=32768`; `k=5`, `j=10`, `--timeout 300`). Preview leads Pass@1 (51.33% vs 49.33%) and All@5 (43.31% vs 36.33%) on the 30-eval Debug set, while 3.5-flash leads Pass@5 (70.00% vs 63.33%) — i.e. preview is more bimodal (more evals where it nails all 5 or fails all 5), while 3.5-flash converts more borderline evals at least once. Unlike the 87-eval suite where preview used 22% fewer tools, on Debug evals preview uses **more** tools per eval (10.9 vs 8.1) — debugging seems to push preview to investigate more before editing.
 
 ## Metrics Explanation
 - Pass@1 -- average probability of success in 1 attempt
