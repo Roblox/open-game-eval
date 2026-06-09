@@ -62,6 +62,14 @@ The benchmark below is based on the **87-eval expanded set**. New model entries 
         <td>30.62%</td>
         <td>0.91%</td>
     </tr>
+    <tr>
+        <td class="model-name">GPT-5.4 (Reasoning: M)</td>
+        <td>40.23%</td>
+        <td>55.17%</td>
+        <td>40.00%</td>
+        <td>29.02%</td>
+        <td>1.81%</td>
+    </tr>
 </tbody>
 </table>
 
@@ -112,6 +120,14 @@ Debug evals test an LLM's ability to identify and fix bugs in existing game scri
         <td>4.26%</td>
     </tr>
     <tr>
+        <td class="model-name">GPT-5.4 (Reasoning: M)</td>
+        <td>51.33%</td>
+        <td>63.33%</td>
+        <td>52.08%</td>
+        <td>39.70%</td>
+        <td>2.98%</td>
+    </tr>
+    <tr>
         <td class="model-name">Gemini 3 Flash Preview</td>
         <td>51.33%</td>
         <td>63.33%</td>
@@ -126,14 +142,6 @@ Debug evals test an LLM's ability to identify and fix bugs in existing game scri
         <td>49.52%</td>
         <td>40.85%</td>
         <td><strong>0.96%</strong></td>
-    </tr>
-    <tr>
-        <td class="model-name">GPT-5.4 (Reasoning: M)</td>
-        <td>50.00%</td>
-        <td>66.67%</td>
-        <td>52.05%</td>
-        <td>31.57%</td>
-        <td>4.36%</td>
     </tr>
     <tr>
         <td class="model-name">GPT-5.5 (Reasoning: M)</td>
