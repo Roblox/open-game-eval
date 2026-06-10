@@ -23,20 +23,28 @@ The benchmark below is based on the **87-eval expanded set**. New model entries 
 </thead>
 <tbody>
     <tr>
+        <td class="model-name">Claude Fable 5</td>
+        <td><strong>50.34%</strong></td>
+        <td>62.07%</td>
+        <td><strong>51.09%</strong></td>
+        <td><strong>39.52%</strong></td>
+        <td>1.40%</td>
+    </tr>
+    <tr>
         <td class="model-name">Claude Opus 4.6</td>
-        <td><strong>48.05%</strong></td>
+        <td>48.05%</td>
         <td>59.77%</td>
         <td>48.05%</td>
-        <td><strong>38.28%</strong></td>
+        <td>38.28%</td>
         <td><strong>0.71%</strong></td>
     </tr>
     <tr>
         <td class="model-name">Gemini 3.5 Flash</td>
-        <td><strong>48.05%</strong></td>
+        <td>48.05%</td>
         <td><strong>63.22%</strong></td>
-        <td><strong>49.03%</strong></td>
+        <td>49.03%</td>
         <td>33.86%</td>
-        <td>3.30%<sup>*</sup></td>
+        <td>3.30%</td>
     </tr>
     <tr>
         <td class="model-name">Gemini 3 Flash Preview</td>
@@ -44,7 +52,7 @@ The benchmark below is based on the **87-eval expanded set**. New model entries 
         <td>60.92%</td>
         <td>48.84%</td>
         <td>35.12%</td>
-        <td>5.51%<sup>*</sup></td>
+        <td>5.51%</td>
     </tr>
     <tr>
         <td class="model-name">Claude Opus 4.7</td>
@@ -96,8 +104,16 @@ Debug evals test an LLM's ability to identify and fix bugs in existing game scri
 </thead>
 <tbody>
     <tr>
+        <td class="model-name">Claude Fable 5</td>
+        <td><strong>64.67%</strong></td>
+        <td><strong>73.33%</strong></td>
+        <td><strong>66.09%</strong></td>
+        <td><strong>54.66%</strong></td>
+        <td>1.01%</td>
+    </tr>
+    <tr>
         <td class="model-name">Gemini 3.1 Pro</td>
-        <td><strong>56.67%</strong></td>
+        <td>56.67%</td>
         <td>70.00%</td>
         <td>58.36%</td>
         <td>42.68%</td>
@@ -107,7 +123,7 @@ Debug evals test an LLM's ability to identify and fix bugs in existing game scri
         <td class="model-name">GLM 5</td>
         <td>56.00%</td>
         <td><strong>73.33%</strong></td>
-        <td><strong>59.87%</strong></td>
+        <td>59.87%</td>
         <td>33.98%</td>
         <td>2.39%</td>
     </tr>
@@ -116,7 +132,7 @@ Debug evals test an LLM's ability to identify and fix bugs in existing game scri
         <td>52.67%</td>
         <td>63.33%</td>
         <td>53.14%</td>
-        <td><strong>43.57%</strong></td>
+        <td>43.57%</td>
         <td>4.26%</td>
     </tr>
     <tr>
