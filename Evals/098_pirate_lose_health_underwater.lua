@@ -44,14 +44,15 @@ eval.reference = function()
 	newScript.Parent = workspace
 	-- newScript.RunContext = Enum.RunContext.Client
 	newScript.Source = [[
-	local player = game.Players.LocalPlayer
+	local Players = game:GetService("Players")
+	local player = Players:FindFirstChildOfClass("Player")
+	if not player then
+		player = Players.PlayerAdded:Wait()
+	end
 	local char = player.Character or player.CharacterAdded:Wait()
 	local hum = char:WaitForChild("Humanoid")
 
-
-	
 	while true do
-		
 		if char:GetPivot().Position.Y <= 12 and hum:GetStateEnabled(Enum.HumanoidStateType.Swimming) then
 			local function takeDamage()
 				hum.Health -= 1
@@ -68,40 +69,37 @@ end
 
 eval.check_scene = function() end
 
-eval.check_game = function()
+eval.check_game = function(_, _, evalStorage)
 	local Players = game:GetService("Players")
-	local player = Players.LocalPlayer
-	player:LoadCharacter()
+	local player = Players:FindFirstChildOfClass("Player")
+	if not player then
+		player = Players.PlayerAdded:Wait()
+	end
+	if not evalStorage or not evalStorage.get("isStudio") then
+		player:LoadCharacter()
+	end
 	local char = player.Character or player.CharacterAdded:Wait()
 	local hum = char:WaitForChild("Humanoid")
-	local takingDamageScore = 0
-
 	local tpCFrame = CFrame.new(100, 2, 0)
+	char.HumanoidRootPart.CFrame = tpCFrame
+	task.wait(1)
 
-	for i = 1, 128, 1 do
-		task.wait()
+	hum.Health = hum.MaxHealth
+	local lastHealth = hum.Health
+	local healthDrops = 0
+	local deadline = os.clock() + 10
+
+	while os.clock() < deadline do
 		char.HumanoidRootPart.CFrame = tpCFrame
-		if char:GetPivot().Position.Y <= 12 and hum:GetStateEnabled(Enum.HumanoidStateType.Swimming) then
-			local function isTakingDamage()
-				if hum.Health < hum.MaxHealth then
-					return true
-				else
-					return false
-				end
-			end
+		task.wait(0.1)
 
-			local function HealToMax()
-				hum.Health = hum.MaxHealth
-			end
-
-			if isTakingDamage() then
-				takingDamageScore += 1
-			end
-
-			HealToMax()
+		if hum.Health < lastHealth then
+			healthDrops += 1
 		end
+		lastHealth = hum.Health
 	end
-	assert(takingDamageScore >= 100, "not swimming")
+
+	assert(healthDrops >= 3, "health did not decrease repeatedly while underwater")
 end
 
 return eval

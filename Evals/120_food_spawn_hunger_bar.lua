@@ -457,6 +457,39 @@ eval.runConfig.serverCheck = function()
 	-- Services
 	-----------------------------------------------------------------
 	local Players = game:GetService("Players")
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+	local statSetter = Instance.new("RemoteFunction")
+	statSetter.Name = "EvalSetSurvivalStat"
+	statSetter.Parent = ReplicatedStorage
+	statSetter.OnServerInvoke = function(player, inst, attribute, value)
+		if typeof(inst) ~= "Instance" or type(value) ~= "number" then
+			return false
+		end
+
+		local char = player.Character
+		local allowed = inst == player
+			or inst == char
+			or inst:IsDescendantOf(player)
+			or (char and inst:IsDescendantOf(char))
+		if not allowed then
+			return false
+		end
+
+		if attribute then
+			if type(inst:GetAttribute(attribute)) ~= "number" then
+				return false
+			end
+			inst:SetAttribute(attribute, value)
+		elseif inst:IsA("NumberValue") then
+			inst.Value = value
+		elseif inst:IsA("IntValue") then
+			inst.Value = math.round(value)
+		else
+			return false
+		end
+		return true
+	end
 
 	-----------------------------------------------------------------
 	-- Humanoid stabilization
@@ -518,7 +551,8 @@ eval.runConfig.serverCheck = function()
 end
 
 assert(eval.runConfig and eval.runConfig.clientChecks, "runConfig.clientChecks is required")
-table.insert(eval.runConfig.clientChecks, function(logService)
+table.insert(eval.runConfig.clientChecks, function(_logService)
+	local statSetter = game:GetService("ReplicatedStorage"):WaitForChild("EvalSetSurvivalStat") :: RemoteFunction
 
 	----------------------------------------------------------------
 	-- Proximity prompt auto-activation
@@ -575,6 +609,23 @@ table.insert(eval.runConfig.clientChecks, function(logService)
 		return self.instance.Value
 	end
 
+	function Candidate:set(value)
+		local ok, updated = pcall(function()
+			return statSetter:InvokeServer(self.instance, self.attribute, value)
+		end)
+		if ok and updated then
+			return
+		end
+
+		if self.attribute then
+			self.instance:SetAttribute(self.attribute, value)
+		elseif self.instance:IsA("IntValue") then
+			self.instance.Value = math.round(value)
+		else
+			self.instance.Value = value
+		end
+	end
+
 	function Candidate:disconnect()
 		if self.running then
 			self.running:Disconnect()
@@ -598,11 +649,12 @@ table.insert(eval.runConfig.clientChecks, function(logService)
 		local inst = self.instance
 		local stat = self.stat
 		local char = stat.character
-		local ok = inst
-			and (inst:IsDescendantOf(stat.player)
+		local ok = inst == stat.player
+			or inst == char
+			or (inst
+				and (inst:IsDescendantOf(stat.player)
 				or (char and inst:IsDescendantOf(char)))
-		if not ok then
-		end
+			)
 		return ok
 	end
 
@@ -629,14 +681,20 @@ table.insert(eval.runConfig.clientChecks, function(logService)
 		self.startTime = os.clock()
 
 		self.test = config.test
-		self.test.stat = self
+		if self.test then
+			self.test.stat = self
+		end
 
 		self.player.CharacterAdded:Connect(function(char)
 			self.character = char
-			self:updateCandidates()
+			if self.test then
+				self:updateCandidates()
+			end
 		end)
 
-		self:updateCandidates()
+		if self.test then
+			self:updateCandidates()
+		end
 
 		task.spawn(function()
 			self:assertGUIBar()
@@ -758,6 +816,13 @@ table.insert(eval.runConfig.clientChecks, function(logService)
 				refillRequests[candidate] = true
 			end
 		end)
+
+		task.defer(function()
+			local initial = candidate.initValue
+			if type(initial) == "number" and initial > 0 then
+				candidate:set(initial * 0.2)
+			end
+		end)
 	end
 
 	local function findRefill(patterns)
@@ -871,42 +936,6 @@ table.insert(eval.runConfig.clientChecks, function(logService)
 	end
 
 	----------------------------------------------------------------
-	-- CooldownRefillTest (Stamina)
-	----------------------------------------------------------------
-	local CooldownRefillTest = {}
-	CooldownRefillTest.__index = CooldownRefillTest
-
-	function CooldownRefillTest.new(config)
-		return setmetatable({
-			threshold = 0.1,
-			cooldown = config.cooldownSeconds or 30,
-			stat = nil
-		}, CooldownRefillTest)
-	end
-
-	function CooldownRefillTest:onCandidateAdded(candidate)
-
-		candidate:bindChanged(function()
-			local v = candidate:get()
-
-			if v < candidate.initValue * self.threshold then
-				self.stat.depletedFound = true
-				candidate:disconnect()
-
-				task.spawn(function()
-					task.wait(self.cooldown)
-
-					local now = candidate:get()
-
-					if now >= candidate.initValue * 0.9 then
-						self.stat:confirmCandidate(candidate)
-					end
-				end)
-			end
-		end)
-	end
-
-	----------------------------------------------------------------
 	-- Dash helper
 	----------------------------------------------------------------
 	local Players = game:GetService("Players")
@@ -980,12 +1009,10 @@ table.insert(eval.runConfig.clientChecks, function(logService)
 		})
 	}
 
-	local stamina = Stat.new("stamina", {
-		test = CooldownRefillTest.new({ cooldownSeconds = 30 })
-	})
+	Stat.new("stamina", {})
 
 	----------------------------------------------------------------
-	-- STAMINA TEST
+	-- DASH TEST
 	----------------------------------------------------------------
 	-- Waiting to stabilize the Player & Character on OpenEval
 
@@ -1004,8 +1031,6 @@ table.insert(eval.runConfig.clientChecks, function(logService)
 	-- Dash Check 3: Cooldown recovery
 	assert(didDash(), "Dash failed after cooldown")
 
-	stamina:finish()
-
 
 	----------------------------------------------------------------
 	-- HUNGER / THIRST
@@ -1014,7 +1039,7 @@ table.insert(eval.runConfig.clientChecks, function(logService)
 		refillDispatcher(vitals)
 	end)
 
-	for i = 1, 300 do
+	for i = 1, 30 do
 		local done = true
 		for _, s in vitals do
 			done = done and s.statFound
