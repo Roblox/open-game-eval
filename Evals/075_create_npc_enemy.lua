@@ -20,8 +20,11 @@ local eval: BaseEval = {
                     }
                 }
             },
-    place = "laser_tag.rbxl"
+    place = "laser_tag.rbxl",
 
+	expected_tool_calls = { "execute_luau", "multi_edit" },
+	expected_script_instances = {},
+	expected_non_script_instances = {},
 }
 
 local selection_context_json = "[]"

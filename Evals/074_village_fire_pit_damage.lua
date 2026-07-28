@@ -20,6 +20,18 @@ local eval: BaseEval = {
 		},
 	},
 	place = "village.rbxl",
+	expected_tool_calls = {
+		"game_tree", -- search for fire parts
+		"inspect_instance",
+		"multi_edit",
+	},
+	expected_script_instances = {},
+	expected_non_script_instances = {
+		"game.Workspace.Structures.House.BuildingFrame.Hearth.FirePart",
+		"game.Workspace.Structures.House.LargeCottage.Hearth.FirePart",
+		"game.Workspace.Structures.Cottage.Hearth.FirePart",
+		"game.Workspace.Structures.Smithy.Bellows.FirePart",
+	},
 }
 
 local SelectionContextJson = "[]"

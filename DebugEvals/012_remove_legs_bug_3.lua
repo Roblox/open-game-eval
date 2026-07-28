@@ -13,7 +13,10 @@ type BaseEval = types.BaseEval
 local eval: BaseEval = {
 	scenario_name = "012_remove_legs_bug_3",
 	prompt = { "I wrote a script to remove player legs when they spawn, but it doesn't work for my character when I first load into the game. It only seems to work for players who join the server after I'm already there." },
-	place = "baseplate.rbxl"
+	place = "baseplate.rbxl",
+	expected_tool_calls = { "grep_search", "multi_edit" },
+	expected_script_instances = {},
+	expected_non_script_instances = {},
 }
 
 local SelectionContextJson = "[]"

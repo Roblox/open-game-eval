@@ -20,6 +20,16 @@ local eval: BaseEval = {
 		},
 	},
 	place = "platformer.rbxl",
+	expected_tool_calls = {
+		"game_tree", -- search for roblonk parts
+		"inspect_instance",
+		"execute_luau",
+		"multi_edit",
+	},
+	expected_script_instances = {},
+	expected_non_script_instances = {
+		"game.Workspace.LevelArt.SkyMeshes.RoBlonk",
+	},
 }
 
 local SelectionContextJson = "[]"

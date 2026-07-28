@@ -20,6 +20,21 @@ local eval: BaseEval = {
 		},
 	},
 	place = "surburban.rbxl",
+	expected_tool_calls = {
+		"grep_search",
+		"read_file", -- check how garage door speed is scripted
+		"game_tree", -- find all garage doors
+		"inspect_instance", -- find attributes for speed
+		"execute_luau",
+	},
+	expected_script_instances = {
+		"game.Workspace.GarageBuilding.PhysicsGarageDoor.DoorOpener.GarageDoorScript",
+		'game.Workspace["Urban House"].Garage.PhysicsGarageDoor.DoorOpener.GarageDoorScript',
+	},
+	expected_non_script_instances = {
+		"game.Workspace.GarageBuilding.PhysicsGarageDoor.Door.Base.BodyGyro",
+		'game.Workspace["Urban House"].Garage.PhysicsGarageDoor.Door.Base.BodyGyro',
+	},
 }
 
 local SelectionContextJson = "[]"

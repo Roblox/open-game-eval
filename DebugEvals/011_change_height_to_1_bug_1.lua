@@ -13,7 +13,10 @@ type BaseEval = types.BaseEval
 local eval: BaseEval = {
 	scenario_name = "011_change_height_to_1_bug_1",
 	prompt = { "I wrote a script to make players 1 stud tall, but when I test it in Studio, my character is still the normal height. The script doesn't seem to be doing anything." },
-	place = "baseplate.rbxl"
+	place = "baseplate.rbxl",
+	expected_tool_calls = { "grep_search", "multi_edit" },
+	expected_script_instances = {},
+	expected_non_script_instances = {},
 }
 
 local SelectionContextJson = "[]"

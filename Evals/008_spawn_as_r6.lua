@@ -19,8 +19,11 @@ local eval: BaseEval = {
                     }
                 }
             },
-    place = "baseplate.rbxl"
+    place = "baseplate.rbxl",
 
+	expected_tool_calls = { "execute_luau" },
+	expected_script_instances = {},
+	expected_non_script_instances = { "game.StarterPlayer.StarterCharacter.Humanoid" },
 }
 
 local SelectionContextJson = "[]"

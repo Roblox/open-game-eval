@@ -20,6 +20,19 @@ local eval: BaseEval = {
 		},
 	},
 	place = "classic_obby.rbxl",
+	expected_tool_calls = {
+		"game_tree", -- check obby segments (but not necessarily positions)
+		"execute_luau",
+	},
+	expected_script_instances = {},
+	expected_non_script_instances = {
+		"game.Workspace.BouncePad",
+		"game.Workspace.Checkpoints",
+		"game.Workspace.Conveyors",
+		"game.Workspace.ObbyStructure",
+		"game.Workspace.TrapParts",
+		"game.Workspace.StartSpawn",
+	},
 }
 
 local SelectionContextJson = "[]"

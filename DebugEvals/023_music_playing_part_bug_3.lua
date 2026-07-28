@@ -13,7 +13,13 @@ type BaseEval = types.BaseEval
 local eval: BaseEval = {
 	scenario_name = "023_music_playing_part_bug_3",
 	prompt = { "I set up a trigger part to play music when a player enters it, but it seems to be working backwards. The music stops when I enter the zone and only starts playing again when I leave. What's wrong with my script?" },
-	place = "baseplate.rbxl"
+	place = "baseplate.rbxl",
+	expected_tool_calls = { "execute_luau", "multi_edit" },
+	expected_script_instances = {},
+	expected_non_script_instances = {
+		"game.Workspace.trigger",
+		"game.Workspace.music",
+	},
 }
 
 local SelectionContextJson = "[]"

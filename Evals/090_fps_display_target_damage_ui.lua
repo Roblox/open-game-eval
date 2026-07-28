@@ -75,7 +75,15 @@ local eval: BaseEval = {
     runConfig = {
         serverCheck = nil,
         clientChecks = {},
-    }
+    },
+	expected_tool_calls = { "game_tree", "execute_luau", "multi_edit" },
+	expected_script_instances = {
+        'game.ServerScriptService.Targets',
+        'game.ServerScriptService.Blaster.Scripts.Blaster'
+    },
+	expected_non_script_instances = {
+        'game.ServerScriptService.Blaster.Events.Tagged'
+    },
 }
 
 local SelectionContextJson = "[]"

@@ -21,6 +21,12 @@ local eval: BaseEval = {
                 }
             },
     place = "surburban.rbxl",
+	expected_tool_calls = { "execute_luau" },
+	expected_script_instances = {},
+	expected_non_script_instances = {
+		'game.Workspace[" water fountain spawn"].Fountain',
+		'game.Workspace["Urban House"].BackDeck.Deck',
+	},
 }
 
 local SelectionContextJson = "[]"

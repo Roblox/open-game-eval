@@ -27,7 +27,10 @@ local eval: BaseEval = {
 	runConfig = {
 		serverCheck = nil,
 		clientChecks = {},
-	}
+	},
+	expected_tool_calls = { "game_tree", "execute_luau", "multi_edit" },
+	expected_script_instances = {},
+	expected_non_script_instances = { "game.Workspace.Targets" },
 }
 
 local SelectionContextJson = "[]"

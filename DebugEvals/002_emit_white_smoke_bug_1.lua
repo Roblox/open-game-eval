@@ -13,7 +13,14 @@ type BaseEval = types.BaseEval
 local eval: BaseEval = {
 	scenario_name = "002_emit_white_smoke_bug_1",
 	prompt = { "The chimneys are emitting black smoke instead of white smoke. It looks really weird and pollutes the neighborhood vibe." },
-	place = "surburban.rbxl"
+	place = "surburban.rbxl",
+	expected_tool_calls = { "execute_luau" },
+	expected_script_instances = {},
+	expected_non_script_instances = {
+		'game.Workspace["Double Story Urban House"].LowerLevel.FrontRoom.GasFireplace.Chimney',
+		'game.Workspace["Urban House"]["Living Room"].GasFireplace.Chimney',
+		'game.Workspace["Urban House Single Story"]["Living Room"].GasFireplace.Chimney',
+	},
 }
 
 local SelectionContextJson = "[]"

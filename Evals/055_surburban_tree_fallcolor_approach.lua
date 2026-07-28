@@ -20,8 +20,11 @@ local eval: BaseEval = {
                     }
                 }
             },
-    place = "surburban.rbxl"
+    place = "surburban.rbxl",
 
+	expected_tool_calls = { "grep_search", "multi_edit" },
+	expected_script_instances = { "game.Workspace.Trees" },
+	expected_non_script_instances = {},
 }
 
 local SelectionContextJson = "[]"

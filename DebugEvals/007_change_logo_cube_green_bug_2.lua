@@ -13,7 +13,12 @@ type BaseEval = types.BaseEval
 local eval: BaseEval = {
 	scenario_name = "007_change_logo_cube_green_bug_2",
 	prompt = { "I'm trying to change the color of the big floating Roblox logo cube to green, but it keeps turning red right after I change it. It seems like some other script is interfering and overriding the color." },
-	place = "platformer.rbxl"
+	place = "platformer.rbxl",
+	expected_tool_calls = { "execute_luau" },
+	expected_script_instances = {},
+	expected_non_script_instances = {
+		"game.Workspace.LevelArt.SkyMeshes.RoBlonk.Roblonx",
+	},
 }
 
 local SelectionContextJson = "[]"

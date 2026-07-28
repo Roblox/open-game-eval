@@ -20,6 +20,9 @@ local eval: BaseEval = {
 		},
 	},
 	place = "ugc_homestore.rbxl",
+	expected_tool_calls = { "multi_edit" },
+	expected_script_instances = {},
+	expected_non_script_instances = {},
 }
 
 local SelectionContextJson = "[]"

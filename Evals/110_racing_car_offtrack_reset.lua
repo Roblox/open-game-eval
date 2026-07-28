@@ -75,7 +75,16 @@ local eval: BaseEval = {
 	runConfig = {
 		serverCheck = nil,
 		clientChecks = {},
-	}
+	},
+	expected_tool_calls = { "game_tree", "grep_search", "read_file", "multi_edit" },
+	expected_script_instances = {},
+	expected_non_script_instances = {
+		'game.ReplicatedStorage.Car',
+		'game.ReplicatedStorage.Car.DriverSeat',
+		'game.ReplicatedStorage.Car.DriverSeat["Occupant"]',
+		'game.Workspace.StartingArea',
+		'game.Workspace.SpawnLocation',
+	},
 }
 
 local SelectionContextJson = "[]"

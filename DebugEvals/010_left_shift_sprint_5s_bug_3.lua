@@ -15,7 +15,10 @@ local utils_runs = require(LoadedCode.EvalUtils.utils_runs)
 local eval: BaseEval = {
 	scenario_name = "010_left_shift_sprint_5s_bug_3",
 	prompt = { "When I hold the sprint key, it works, but it feels like the sprint lasts way too long. It's supposed to time out after 5 seconds, but it seems to go on for much longer than that before my character gets tired and slows down." },
-	place = "baseplate.rbxl"
+	place = "baseplate.rbxl",
+	expected_tool_calls = { "grep_search", "multi_edit" },
+	expected_script_instances = {},
+	expected_non_script_instances = {},
 }
 
 local SelectionContextJson = "[]"

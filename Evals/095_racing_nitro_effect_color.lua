@@ -78,7 +78,30 @@ local eval: BaseEval = {
     runConfig = {
         serverCheck = nil,
         clientChecks = {},
-    }
+    },
+	expected_tool_calls = { "game_tree", "grep_search", "read_file", "multi_edit" },
+	expected_script_instances = {
+		'game.ServerScriptService.CarSpawning',
+		'game.ServerScriptService.CarSpawning.spawnCar',
+		'game.ServerScriptService.CarSpawning.recolorModel',
+		'game.ReplicatedStorage.Car.Scripts.Client.FX',
+		'game.ReplicatedStorage.Car.Scripts.Client.FX.Particles'
+	},
+	expected_non_script_instances = {
+		'game.ReplicatedStorage.Car',
+		'game.ReplicatedStorage.Car.Body.Collision.body["Color"]',
+		'game.ReplicatedStorage.Car.Chassis.LeftNitroEmitterAttachment',
+		'game.ReplicatedStorage.Car.Chassis.LeftNitroEmitterAttachment.PointLight["Color"]',
+		'game.ReplicatedStorage.Car.Chassis.LeftNitroEmitterAttachment.GlowEmitter["Color"]',
+		'game.ReplicatedStorage.Car.Chassis.LeftNitroEmitterAttachment.RearEmitter["Color"]',
+		'game.ReplicatedStorage.Car.Chassis.LeftNitroEmitterAttachment.SparkEmitter["Color"]',
+		'game.ReplicatedStorage.Car.Chassis.RightNitroEmitterAttachment',
+		'game.ReplicatedStorage.Car.Chassis.RightNitroEmitterAttachment.PointLight["Color"]',
+		'game.ReplicatedStorage.Car.Chassis.RightNitroEmitterAttachment.GlowEmitter["Color"]',
+		'game.ReplicatedStorage.Car.Chassis.RightNitroEmitterAttachment.RearEmitter["Color"]',
+		'game.ReplicatedStorage.Car.Chassis.RightNitroEmitterAttachment.SparkEmitter["Color"]',
+		'game.ReplicatedStorage.Car.Scripts.Server'
+	},
 }
 
 local SelectionContextJson = "[]"

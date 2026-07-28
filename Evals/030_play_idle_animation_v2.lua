@@ -21,6 +21,9 @@ local eval: BaseEval = {
                 }
             },
     place = "platformer.rbxl",
+	expected_tool_calls = { "grep_search", "multi_edit" },
+	expected_script_instances = {},
+	expected_non_script_instances = {},
 }
 
 local SelectionContextJson = "[]"

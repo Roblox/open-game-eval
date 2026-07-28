@@ -101,6 +101,48 @@ The eval is considered as a pass only if all checks are passed.
 - `warnings`: Number of warnings received when running the eval.
 - `error`: Number of errors received when running the eval.
 
+## Task annotations
+
+Every task file carries three optional annotation fields. They do not affect grading,
+and nothing in them is shown to the model. They record what a competent solution is
+expected to do, so that a run's *trajectory* can be scored against the task rather
+than only its final verdict.
+
+```lua
+local eval: BaseEval = {
+    scenario_name = "080_surburban_school_lights_on",
+    -- prompt, place, checks ...
+    expected_tool_calls = {
+        "game_tree", -- search for lights
+        "inspect_instance",
+        "execute_luau",
+    },
+    expected_script_instances = {},
+    expected_non_script_instances = {
+        "game.Workspace.School.Lights",
+    },
+}
+```
+
+- **`expected_tool_calls`** the tools a competent solution is expected to use. Present
+  and non-empty on every task. Entries may carry a trailing Lua comment explaining the
+  intent, as above.
+- **`expected_script_instances`** script instances (`Script`, `LocalScript`,
+  `ModuleScript`) whose contents a solution has to read or modify.
+- **`expected_non_script_instances`** the remaining instances a solution depends on,
+  such as the folder, model, or part it has to locate and change.
+
+Unlike `expected_tool_calls`, the two instance fields are not populated on every task.
+An empty table means the task was not annotated, not that the task has no dependencies,
+so a task with an empty field is better excluded from an analysis than counted as zero.
+
+Instance paths are written from the datamodel root, `game.Workspace.School.Lights`,
+and use bracket indexing where a name contains a space,
+`game.Workspace["Urban House"].Chimney`. A path names the instance a solution must
+reach, not necessarily one it must modify: for a task whose prompt says to change
+every light in a building, the annotation names the containing folder, and the
+solution is expected to walk it.
+
 ## More Usage
 
 ### Running Multiple Evaluations

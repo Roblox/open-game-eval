@@ -20,6 +20,17 @@ local eval: BaseEval = {
 		},
 	},
 	place = "surburban.rbxl",
+	expected_tool_calls = {
+		"game_tree", -- understand house, terrain
+		"inspect_instance", -- understand floor
+		"execute_luau",
+	},
+	expected_script_instances = {},
+	expected_non_script_instances = {
+		'game.Workspace["Double Story Urban House"].HouseFrame.FrontPorch',
+		'game.Workspace["Double Story Urban House"].LowerLevel.RoomFrames',
+		'game.Workspace["Double Story Urban House"].UpperLevel.RoomFrames',
+	},
 }
 
 local SelectionContextJson = "[]"

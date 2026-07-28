@@ -74,7 +74,14 @@ local eval: BaseEval = {
     runConfig = {
         serverCheck = nil,
         clientChecks = {},
-    }
+    },
+	expected_tool_calls = { "grep_search", "read_file", "multi_edit" },
+	expected_script_instances = {},
+	expected_non_script_instances = {
+        'game.ReplicatedStorage.Gameplay.Remotes.PickupCoin',
+        'game.ReplicatedStorage.Gameplay.Constants',
+        'game.Workspace.Gameplay.CoinPickups',
+    },
 }
 
 local SelectionContextJson = "[]"

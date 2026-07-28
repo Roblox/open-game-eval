@@ -13,7 +13,13 @@ type BaseEval = types.BaseEval
 local eval: BaseEval = {
 	scenario_name = "023_music_playing_part_bug_1",
 	prompt = { "I set up a trigger part that's supposed to play music when a player walks into it, but the music never starts. I've checked that the sound and the part exist, but nothing happens when my character touches the part." },
-	place = "baseplate.rbxl"
+	place = "baseplate.rbxl",
+	expected_tool_calls = { "execute_luau", "multi_edit" },
+	expected_script_instances = {},
+	expected_non_script_instances = {
+		"game.Workspace.trigger",
+		"game.Workspace.music",
+	},
 }
 
 local SelectionContextJson = "[]"
