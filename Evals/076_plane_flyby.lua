@@ -19,8 +19,11 @@ local eval: BaseEval = {
                     }
                 }
             },
-    place = "baseplate.rbxl"
+    place = "baseplate.rbxl",
 
+	expected_tool_calls = { "insert_from_creator_store", "grep_search", "read_file", "multi_edit" },
+	expected_script_instances = {},
+	expected_non_script_instances = {},
 }
 
 local selection_context_json = "[]"

@@ -19,8 +19,11 @@ local eval: BaseEval = {
                     }
                 }
             },
-    place = "flat_terrain.rbxl"
+    place = "flat_terrain.rbxl",
 
+	expected_tool_calls = { "execute_luau" },
+	expected_script_instances = {},
+	expected_non_script_instances = { "game.Workspace.Terrain" },
 }
 
 local selection_context_json = "[]"

@@ -14,7 +14,10 @@ local utils_he = require(LoadedCode.EvalUtils.utils_he)
 local eval: BaseEval = {
 	scenario_name = "020_gravity_well_bug_1",
 	prompt = { "I set up the gravity well part, but when players touch it, they get slammed into the ground instead of floating up." },
-	place = "baseplate.rbxl"
+	place = "baseplate.rbxl",
+	expected_tool_calls = { "execute_luau", "multi_edit" },
+	expected_script_instances = {},
+	expected_non_script_instances = {},
 }
 
 local SelectionContextJson = "[]"

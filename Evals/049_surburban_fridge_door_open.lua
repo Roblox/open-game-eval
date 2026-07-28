@@ -21,6 +21,9 @@ local eval: BaseEval = {
                 }
             },
     place = "surburban.rbxl",
+	expected_tool_calls = { "grep_search", "read_file", "multi_edit" },
+	expected_script_instances = {},
+	expected_non_script_instances = { 'game.Workspace["Convenience Store"].Refridgerators' },
 }
 
 local SelectionContextJson = "[]"

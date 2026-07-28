@@ -13,7 +13,12 @@ type BaseEval = types.BaseEval
 local eval: BaseEval = {
 	scenario_name = "004_reduce_car_friction_enable_sliding_bug_2",
 	prompt = { "I tried to make the cars more slippery so they could drift, but now they feel even more stuck to the road and difficult to turn. It feels like the friction went up instead of down. What's wrong?" },
-	place = "racing.rbxl"
+	place = "racing.rbxl",
+	expected_tool_calls = { "execute_luau" },
+	expected_script_instances = {},
+	expected_non_script_instances = {
+		"game.ReplicatedStorage.Car.Wheels",
+	},
 }
 
 local SelectionContextJson = "[]"

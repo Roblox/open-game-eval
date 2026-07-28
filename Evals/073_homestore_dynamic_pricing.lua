@@ -20,8 +20,11 @@ local eval: BaseEval = {
                     }
                 }
             },
-    place = "ugc_homestore.rbxl"
+    place = "ugc_homestore.rbxl",
 
+	expected_tool_calls = { "grep_search", "read_file", "multi_edit" },
+	expected_script_instances = { "game.ReplicatedStorage.UI.Components.ItemTile" },
+	expected_non_script_instances = {},
 }
 
 local selection_context_json = "[]"

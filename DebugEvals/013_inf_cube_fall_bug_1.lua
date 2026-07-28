@@ -13,7 +13,10 @@ type BaseEval = types.BaseEval
 local eval: BaseEval = {
 	scenario_name = "013_inf_cube_fall_bug_1",
 	prompt = { "I wrote a script that's supposed to make a cube fall at the center of the map every second, but nothing is happening. No parts are appearing at all." },
-	place = "baseplate.rbxl"
+	place = "baseplate.rbxl",
+	expected_tool_calls = { "multi_edit" },
+	expected_script_instances = {},
+	expected_non_script_instances = {},
 }
 
 local SelectionContextJson = "[]"

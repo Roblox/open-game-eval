@@ -13,7 +13,12 @@ type BaseEval = types.BaseEval
 local eval: BaseEval = {
 	scenario_name = "003_make_leaves_fall_colored_bug_1",
 	prompt = { "I tried to make the leaves on the trees change to autumn colors, but they all turned bright blue and green instead. That doesn't look like fall at all." },
-	place = "village.rbxl"
+	place = "village.rbxl",
+	expected_tool_calls = { "execute_luau" },
+	expected_script_instances = {},
+	expected_non_script_instances = {
+		"game.Workspace.Trees",
+	},
 }
 
 local SelectionContextJson = "[]"

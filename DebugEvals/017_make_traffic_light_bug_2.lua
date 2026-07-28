@@ -14,7 +14,12 @@ local utils_he = require(LoadedCode.EvalUtils.utils_he)
 local eval: BaseEval = {
 	scenario_name = "017_make_traffic_light_bug_2",
 	prompt = { "I added the traffic light model to my game, but it's just stuck. The lights never turn on or change color." },
-	place = "baseplate.rbxl"
+	place = "baseplate.rbxl",
+	expected_tool_calls = { "execute_luau", "grep_search", "multi_edit" },
+	expected_script_instances = {},
+	expected_non_script_instances = {
+		"game.Workspace.TrafficLight",
+	},
 }
 
 local SelectionContextJson = "[]"

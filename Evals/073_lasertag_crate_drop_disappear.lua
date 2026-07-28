@@ -20,6 +20,12 @@ local eval: BaseEval = {
                 }
             },
     place = "laser_tag.rbxl",
+	expected_tool_calls = { "execute_luau", "grep_search", "read_file", "multi_edit" },
+	expected_script_instances = {},
+	expected_non_script_instances = {
+		"game.Workspace.Level_Art.Architectural.Props.CrateSmall",
+		'game.ServerStorage["Laser Tag Template Library"].Props.CrateSmall',
+	},
 }
 
 local SelectionContextJson = "[]"

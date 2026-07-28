@@ -13,7 +13,10 @@ type BaseEval = types.BaseEval
 local eval: BaseEval = {
 	scenario_name = "008_spawn_as_r6_bug_1",
 	prompt = { "Players are spawning as the newer R15 models, but we need them to be the classic R6 blocky characters for our game." },
-	place = "baseplate.rbxl"
+	place = "baseplate.rbxl",
+	expected_tool_calls = { "execute_luau" },
+	expected_script_instances = {},
+	expected_non_script_instances = { "game.StarterPlayer.StarterCharacter.Humanoid" },
 }
 
 local SelectionContextJson = "[]"

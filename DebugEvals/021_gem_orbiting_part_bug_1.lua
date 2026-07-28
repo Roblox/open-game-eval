@@ -13,7 +13,12 @@ type BaseEval = types.BaseEval
 local eval: BaseEval = {
 	scenario_name = "021_gem_orbiting_part_bug_1",
 	prompt = { "I tried to make a gem that orbits a part, but the gem isn't showing up in the game at all. It's completely invisible and doesn't seem to exist in the Workspace." },
-	place = "baseplate.rbxl"
+	place = "baseplate.rbxl",
+	expected_tool_calls = { "execute_luau", "multi_edit" },
+	expected_script_instances = {},
+	expected_non_script_instances = {
+		"game.Workspace.OrbitPart",
+	},
 }
 
 local SelectionContextJson = '[{"instanceName": "OrbitPart", "className": "Part"}]'

@@ -19,8 +19,15 @@ local eval: BaseEval = {
                     }
                 }
             },
-    place = "surburban.rbxl"
+    place = "surburban.rbxl",
 
+	expected_tool_calls = { "execute_luau" },
+	expected_script_instances = {},
+	expected_non_script_instances = {
+		'game.Workspace["Double Story Urban House"].LowerLevel.FrontRoom.GasFireplace.Chimney',
+		'game.Workspace["Urban House"]["Living Room"].GasFireplace.Chimney',
+		'game.Workspace["Urban House Single Story"]["Living Room"].GasFireplace.Chimney',
+	},
 }
 
 local SelectionContextJson = "[]"

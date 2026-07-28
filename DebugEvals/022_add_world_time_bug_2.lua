@@ -14,7 +14,10 @@ local utils_he = require(LoadedCode.EvalUtils.utils_he)
 local eval: BaseEval = {
 	scenario_name = "022_add_world_time_bug_2",
 	prompt = { "The day/night cycle seems to be running way too fast. It feels like time is speeding up more than it should." },
-	place = "baseplate.rbxl"
+	place = "baseplate.rbxl",
+	expected_tool_calls = { "multi_edit" },
+	expected_script_instances = {},
+	expected_non_script_instances = {},
 }
 
 local SelectionContextJson = "[]"

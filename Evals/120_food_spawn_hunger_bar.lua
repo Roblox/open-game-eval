@@ -79,7 +79,10 @@ Make the cheese burger restore half of the hunger bar and the water bottle resto
 	runConfig = {
 		serverCheck = nil,
 		clientChecks = {},
-	}
+	},
+	expected_tool_calls = { "execute_luau", "multi_edit" },
+	expected_script_instances = {},
+	expected_non_script_instances = {},
 }
 
 local SelectionContextJson = "[]"

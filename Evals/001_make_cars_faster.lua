@@ -19,8 +19,13 @@ local eval: BaseEval = {
                     }
                 }
             },
-    place = "racing.rbxl"
+    place = "racing.rbxl",
 
+	expected_tool_calls = { "execute_luau" },
+	expected_script_instances = {},
+	expected_non_script_instances = {
+		"game.ReplicatedStorage.Car",
+	},
 }
 
 local SelectionContextJson = "[]"

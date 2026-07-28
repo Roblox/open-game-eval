@@ -20,8 +20,11 @@ local eval: BaseEval = {
 		}
 	},
 	-- optional, placefile to load before running setup function
-	place = "baseplate.rbxl"
+	place = "baseplate.rbxl",
 
+	expected_tool_calls = { "grep_search", "multi_edit" },
+	expected_script_instances = {},
+	expected_non_script_instances = {},
 }
 
 local SelectionContextJson = "[]"

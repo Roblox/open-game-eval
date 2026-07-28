@@ -24,6 +24,11 @@ local eval: BaseEval = {
 		serverCheck = nil,
 		clientChecks = {},
 	},
+	expected_tool_calls = { "grep_search", "read_file", "multi_edit" },
+	expected_script_instances = {
+		"game.ReplicatedStorage.Blaster.Scripts.CameraRecoiler",
+	},
+	expected_non_script_instances = {},
 }
 
 local SelectionContextJson = "[]"

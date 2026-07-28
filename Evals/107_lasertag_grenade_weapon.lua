@@ -24,6 +24,13 @@ local eval: BaseEval = {
 		serverCheck = nil,
 		clientChecks = {},
 	},
+	expected_tool_calls = {
+		"game_tree", -- check if grenade weapon exists
+		"execute_luau",
+		"multi_edit",
+	},
+	expected_script_instances = {},
+	expected_non_script_instances = {},
 }
 
 local SelectionContextJson = "[]"

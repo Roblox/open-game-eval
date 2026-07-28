@@ -20,8 +20,11 @@ local eval: BaseEval = {
                     }
                 }
             },
-    place = "surburban.rbxl"
+    place = "surburban.rbxl",
 
+	expected_tool_calls = { "execute_luau" },
+	expected_script_instances = {},
+	expected_non_script_instances = { 'game.Workspace["Convenient Store"].ItemsForSale.Flashlights' },
 }
 
 local SelectionContextJson = "[]"

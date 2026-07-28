@@ -15,7 +15,10 @@ local utils_runs = require(LoadedCode.EvalUtils.utils_runs)
 local eval: BaseEval = {
 	scenario_name = "010_left_shift_sprint_5s_bug_2",
 	prompt = { "When I hold Left Shift to sprint, it works, but if I let go of the key early, I keep sprinting for the full 5 seconds. I should stop sprinting as soon as I release the key." },
-	place = "baseplate.rbxl"
+	place = "baseplate.rbxl",
+	expected_tool_calls = { "grep_search", "multi_edit" },
+	expected_script_instances = {},
+	expected_non_script_instances = {},
 }
 
 local SelectionContextJson = "[]"

@@ -13,7 +13,12 @@ type BaseEval = types.BaseEval
 local eval: BaseEval = {
 	scenario_name = "001_make_cars_faster_bug_2",
 	prompt = { "I was trying to make the cars faster, but now they don't spawn in the game at all and I'm getting errors. I think I might have moved the car prefab somewhere by accident." },
-	place = "racing.rbxl"
+	place = "racing.rbxl",
+	expected_tool_calls = { "execute_luau" },
+	expected_script_instances = {},
+	expected_non_script_instances = {
+		"game.ReplicatedStorage.Car",
+	},
 }
 
 local SelectionContextJson = "[]"

@@ -12,7 +12,12 @@ type BaseEval = types.BaseEval
 local eval: BaseEval = {
 	scenario_name = "001_make_cars_faster_bug_1",
 	prompt = { "I'm trying to run a script to make the cars faster, but it keeps erroring out saying it can't find the car's 'Engine'. Please fix without revising the script." },
-	place = "racing.rbxl"
+	place = "racing.rbxl",
+	expected_tool_calls = { "execute_luau" },
+	expected_script_instances = {},
+	expected_non_script_instances = {
+		"game.ReplicatedStorage.Car",
+	},
 }
 
 eval.setup = function()

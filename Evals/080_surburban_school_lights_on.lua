@@ -20,6 +20,15 @@ local eval: BaseEval = {
 		},
 	},
 	place = "surburban.rbxl",
+	expected_tool_calls = {
+		"game_tree", -- search for lights
+		"inspect_instance",
+		"execute_luau",
+	},
+	expected_script_instances = {},
+	expected_non_script_instances = {
+		"game.Workspace.School.Lights",
+	},
 }
 
 local SelectionContextJson = "[]"

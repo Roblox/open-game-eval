@@ -21,6 +21,9 @@ local eval: BaseEval = {
                 }
             },
     place = "village.rbxl",
+	expected_tool_calls = { "execute_luau", "multi_edit" },
+	expected_script_instances = {},
+	expected_non_script_instances = { "game.Workspace.Garden" },
 }
 
 local SelectionContextJson = "[]"

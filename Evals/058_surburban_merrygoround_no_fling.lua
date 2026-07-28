@@ -20,8 +20,11 @@ local eval: BaseEval = {
                     }
                 }
             },
-    place = "surburban.rbxl"
+    place = "surburban.rbxl",
 
+	expected_tool_calls = { "grep_search", "read_file", "multi_edit" },
+	expected_script_instances = { "game.Workspace.Playground.MerryGoRound.Script" },
+	expected_non_script_instances = {},
 }
 
 local SelectionContextJson = "[]"

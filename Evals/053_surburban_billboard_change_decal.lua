@@ -20,8 +20,16 @@ local eval: BaseEval = {
                     }
                 }
             },
-    place = "surburban.rbxl"
+    place = "surburban.rbxl",
 
+	expected_tool_calls = { "execute_luau", "multi_edit" },
+	expected_script_instances = {},
+	expected_non_script_instances = {
+		"game.Workspace.Billboard",
+		"game.Workspace.Billboard.ad1",
+		"game.Workspace.Billboard.ad2",
+		"game.Workspace.Billboard.ad3",
+	},
 }
 
 local SelectionContextJson = "[]"

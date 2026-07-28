@@ -21,6 +21,9 @@ local eval: BaseEval = {
                 }
             },
     place = "laser_tag.rbxl",
+	expected_tool_calls = { "grep_search", "multi_edit" },
+	expected_script_instances = { "game.StarterPlayer.StarterCharacterScripts.Health.script" },
+	expected_non_script_instances = {},
 }
 
 local SelectionContextJson = "[]"
