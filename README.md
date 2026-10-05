@@ -2,6 +2,26 @@
 
 OpenGameEval is an evaluation framework for testing LLMs on Roblox game development tasks. This repository contains open-sourced evaluation scripts and tools for running automated assessments in the Roblox Studio environment.
 
+## Paper
+
+**[OpenGameEval: Benchmarking Agentic Programming and Exploration in a Stateful Game Engine](https://arxiv.org/abs/2610.02563)** (arXiv:2610.02563)
+
+The paper describes the benchmark and evaluation framework in this repository. It runs language models as agents in reproducible, stateful Roblox Studio sessions and scores each run with executable checks, both on the edited scene and in a simulated play session. Because the agent's action space separates observation tools from editing tools, the framework can measure exploration directly, not just final task success. The paper reports pass rates and exploration behavior for 13 frontier models on 84 human-curated core tasks, with 16 attempts per task. It finds that the tasks remain hard for current models, and that runs which inspect the objects a task touches before editing them succeed more often. A shorter version appears at the NeurIPS 2026 Workshop on Evaluation of Interactive Agents.
+
+If you use OpenGameEval in your research, please cite:
+
+```bibtex
+@misc{turkel2026opengameevalbenchmarkingagenticprogramming,
+      title={OpenGameEval: Benchmarking Agentic Programming and Exploration in a Stateful Game Engine}, 
+      author={Eray Turkel and Mengsha Sun and Kartik Ayyar and Sean Dunigan and Jack Lu and Vlad Shcherban and Hsiang-Shun Shih and Xin Wang and Tiantian Zhang},
+      year={2026},
+      eprint={2610.02563},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2610.02563}, 
+}
+```
+
 ## LLM Leaderboard
 
 The LLM Leaderboard summarizes benchmark results and progress for all evaluated Large Language Models in this repository.
